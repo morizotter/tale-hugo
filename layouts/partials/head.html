@@ -60,6 +60,15 @@
 {{ with .Site.Social.facebook_admin }}
     <meta property="fb:admins" content="{{ . }}"/>{{ end }}
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="og:title" content="{{ .Title }}" />
+    <meta name="og:description" content="{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta name="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.profileImagePath }}" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:site" content="@morizotter" />
+    <meta name="twitter:creator" content="@morizotter" />
+
 
     <title>
     {{- if eq .URL "/" }}
