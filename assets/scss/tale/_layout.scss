@@ -91,3 +91,25 @@ footer {
     font-size: .8rem;
   }
 }
+
+
+
+.two-column {
+  margin-top: 10px;
+  white-space: nowrap;
+  &-box {
+    width: 50%;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .two-column {
+    white-space: normal;
+    &-box {
+      width: 100%;
+    }
+  }
+}
