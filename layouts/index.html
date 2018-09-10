@@ -43,21 +43,31 @@
         </a>
     {{ end }}
     </div>
-    <div class="catalogue">
+    <div class="showcase">
         <h2 class="group-headline">
             Projects
         </h2>
+        <div class="showcase-line"></div>
     {{ $projects := where .Pages "Section" "projects" }}
     {{ range $projects.ByDate.Reverse }}
-        <a href="{{ .Permalink }}" class="catalogue-item">
-            <div>
-                <p class="catalogue-item-title">
-                    <time datetime="{{ .PublishDate }}"
-                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-02" }}</time>{{ .Title }}
-                    : {{ .Description }}
-                </p>
+        <div class="two-column">
+            <div class="two-column-box">
+                <a href="{{ .Permalink }}">
+                <img src="{{ .Params.feature_image }}" class="showcase-image"/>
+                </a>
             </div>
-        </a>
+            <div class="two-column-box">
+                <div class="showcase-item">
+                    <a href="{{ .Permalink }}">
+                        <div class="showcase-item-title">{{ .Title }}</div>
+                    </a>
+                    <div class="showcase-item-description">{{ .Description }}</div>
+                    <time datetime="{{ .PublishDate }}"
+                          class="showcase-item-time">{{ .PublishDate.Format "2006-01-02" }}</time>
+                </div>
+            </div>
+        </div>
+        <div class="showcase-line"></div>
     {{ end }}
     </div>
 </main>
