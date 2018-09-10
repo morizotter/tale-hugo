@@ -16,17 +16,30 @@
     </div>
     <div class="catalogue">
         <h2 class="group-headline">
+            Interests / Work Field
+        </h2>
+        <p class="catalogue-item-title">
+            |
+        {{ with .Page.Params.interests }}
+        {{ range . }}
+
+        {{ . }} |
+
+        {{ end }}
+        {{ end }}
+        </p>
+    </div>
+    <div class="catalogue">
+        <h2 class="group-headline">
             News
         </h2>
     {{ $articles := where .Pages "Section" "articles" }}
     {{ range first 5 $articles.ByDate.Reverse }}
         <a href="{{ .Permalink }}" class="catalogue-item">
-            <div>
-                <p class="catalogue-item-title">
-                    <time datetime="{{ .PublishDate }}"
-                          class="catalogue-item-time">{{ .PublishDate.Format "2006-01-02" }}</time>{{ .Title }}
-                </p>
-            </div>
+            <p class="catalogue-item-title">
+                <time datetime="{{ .PublishDate }}"
+                      class="catalogue-item-time">{{ .PublishDate.Format "2006-01-02" }}</time>{{ .Title }}
+            </p>
         </a>
     {{ end }}
     </div>
