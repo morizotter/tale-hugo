@@ -53,7 +53,7 @@
         <div class="two-column">
             <div class="two-column-box">
                 <a href="{{ .Permalink }}">
-                <img src="{{ .Params.feature_image }}" class="showcase-image"/>
+                    <img src="{{ .Params.feature_image }}" class="showcase-image"/>
                 </a>
             </div>
             <div class="two-column-box">
@@ -62,8 +62,9 @@
                         <div class="showcase-item-title">{{ .Title }}</div>
                     </a>
                     <div class="showcase-item-description">{{ .Description }}</div>
-                    <time datetime="{{ .PublishDate }}"
-                          class="showcase-item-time">{{ .PublishDate.Format "2006-01-02" }}</time>
+                    <time datetime="{{ .PublishDate }}" class="showcase-item-time">
+                    {{ .PublishDate.Format "2006-01-02" }}
+                    </time>
                 </div>
             </div>
         </div>
