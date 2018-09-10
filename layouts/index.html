@@ -4,7 +4,7 @@
     <div class="profile">
         <div class="two-column">
             <div class="two-column-box">
-                <h2 class="profile-title">
+                <h2 class="group-headline">
                     Profile
                 </h2>
                 <div class="profile-body">{{ .Content }}</div>
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="catalogue">
-        <h2 class="catalogue-title">
+        <h2 class="group-headline">
             News
         </h2>
     {{ $articles := where .Pages "Section" "articles" }}
@@ -31,7 +31,7 @@
     {{ end }}
     </div>
     <div class="catalogue">
-        <h2 class="catalogue-title">
+        <h2 class="group-headline">
             Projects
         </h2>
     {{ $projects := where .Pages "Section" "projects" }}
