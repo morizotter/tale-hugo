@@ -14,3 +14,13 @@
     }
   }
 }
+
+@media screen and (max-width: $media-800) {
+  .catalogue {
+    &-item {
+      &-time {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
