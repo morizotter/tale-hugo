@@ -6,11 +6,22 @@
     &-title {
       font-size: 1rem;
       font-weight: 10;
-      margin-bottom: 5px;
+      margin-bottom: 2px;
     }
     &-description {
       font-size: 0.6rem;
       font-weight: 10;
+      margin-bottom: 2px;
+    }
+    &-tags {
+      &-tag {
+        display: inline-block;
+        font-size: 0.5rem;
+        white-space: normal;
+        padding: 2px 6px;
+        border: $grey-2 1px solid;
+        border-radius: 4px;
+      }
     }
     &-time {
       font-size: 0.5rem;

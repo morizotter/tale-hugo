@@ -62,6 +62,13 @@
                         <div class="showcase-item-title">{{ .Title }}</div>
                     </a>
                     <div class="showcase-item-description">{{ .Description }}</div>
+                    <div class="showcase-item-tags">
+                    {{ range .Params.Tags}}
+                    <div class="showcase-item-tags-tag">
+                {{ . }}
+                    </div>
+                    {{ end }}
+                    </div>
                     <time datetime="{{ .PublishDate }}" class="showcase-item-time">
                     {{ .PublishDate.Format "2006-01-02" }}
                     </time>
