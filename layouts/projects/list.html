@@ -20,8 +20,16 @@
                         <div class="showcase-item-title">{{ $e.Title }}</div>
                     </a>
                     <div class="showcase-item-description">{{ $e.Description }}</div>
-                    <time datetime="{{ $e.PublishDate }}"
-                          class="showcase-item-time">{{ $e.PublishDate.Format "2006-01-02" }}</time>
+                    <div class="showcase-item-tags">
+                    {{ range .Params.Tags}}
+                        <div class="showcase-item-tags-tag">
+                        {{ . }}
+                        </div>
+                    {{ end }}
+                    </div>
+                    <time datetime="{{ $e.PublishDate }}" class="showcase-item-time">
+                    {{ $e.PublishDate.Format "2006-01-02" }}
+                    </time>
                 </div>
             </div>
         </div>
