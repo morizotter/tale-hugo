@@ -104,17 +104,17 @@ footer {
 // two-column layout
 
 .two-column {
-  margin-top: 10px;
   white-space: nowrap;
   &-box {
     width: 50%;
     margin: 0px;
     display: inline-block;
     vertical-align: top;
+    white-space: normal;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $media-800) {
   .two-column {
     white-space: normal;
     &-box {
