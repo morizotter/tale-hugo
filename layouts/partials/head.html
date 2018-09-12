@@ -72,7 +72,7 @@
     <meta property="twitter:description"
           content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
     <meta name="twitter:url" content="{{ .Permalink }}"/>
-{{ if $feature_image }}
+{{ if $feature_image }}
     <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Page.Params.feature_image }}"/>
 {{ else }}
     <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.profileImagePath }}"/>
