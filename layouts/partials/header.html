@@ -13,9 +13,9 @@
             <li><a href="{{ "articles" | absLangURL }}">articles</a></li>
             <li><a href="{{ "projects" | absLangURL }}">projects</a></li>
         {{ if eq .Site.Language.Lang "ja" }}
-            <li><a href="{{ .Site.BaseURL }}">en</a></li>
+            <li><a href="{{ replace .Page.Permalink "/ja/" "/" }}">en</a></li>
         {{ else }}
-            <li><a href="{{ printf "%s%s" .Site.BaseURL "ja" }}">ja</a></li>
+            <li><a href="{{ printf "%s%s" .Site.BaseURL "ja" }}{{ .Page.RelPermalink }}">ja</a></li>
         {{ end }}
         </ul>
     </div>
